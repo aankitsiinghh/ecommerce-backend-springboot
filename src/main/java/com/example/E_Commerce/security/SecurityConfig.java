@@ -30,7 +30,11 @@ public class SecurityConfig {
                         auth.requestMatchers( "/api/auth/register",
                                         "/api/auth/login",
                                         "/api/auth/verify-otp",
-                                        "/api/auth/resend-otp").permitAll()
+                                        "/api/auth/resend-otp",
+                                        "/swagger-ui/**",
+                                        "/swagger-ui.html",
+                                        "/v3/api-docs/**",
+                                        "/v3/api-docs.yaml").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/api/products/**", "/api/categories/**").permitAll()
                                 .anyRequest().authenticated());
         http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
