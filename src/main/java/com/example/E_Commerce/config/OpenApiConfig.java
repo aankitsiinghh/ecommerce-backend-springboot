@@ -24,13 +24,7 @@ public class OpenApiConfig {
                         .version("v1.0")
                         .contact(new Contact()
                                 .name("Ankit Singh")
-                                .url("https://github.com/aankitsiinghh/ecommerce-backend-springboot")))
-                .components(new Components()
-                        .addSecuritySchemes("bearerAuth",
-                                new SecurityScheme()
-                                        .type(SecurityScheme.Type.HTTP)
-                                        .scheme("bearer")
-                                        .bearerFormat("JWT")))
-                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"));
+                                .url("https://github.com/aankitsiinghh/ecommerce-backend-springboot")));
+
     }
 }
